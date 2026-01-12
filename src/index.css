@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark DevOps Terminal Theme */
+    --background: 222 47% 5%;
+    --foreground: 210 40% 96%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 96%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 96%;
+
+    /* Cyan accent - DevOps/Cloud themed */
+    --primary: 186 100% 50%;
+    --primary-foreground: 222 47% 5%;
+
+    /* Darker secondary */
+    --secondary: 222 30% 12%;
+    --secondary-foreground: 210 40% 96%;
+
+    --muted: 222 30% 15%;
+    --muted-foreground: 215 20% 55%;
+
+    /* Green accent for success/active states */
+    --accent: 142 76% 45%;
+    --accent-foreground: 222 47% 5%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 30% 18%;
+    --input: 222 30% 18%;
+    --ring: 186 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom DevOps colors */
+    --terminal-green: 142 76% 45%;
+    --azure-blue: 207 90% 54%;
+    --docker-blue: 207 85% 51%;
+    --kubernetes-blue: 213 85% 57%;
+    --glow-cyan: 186 100% 50%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(186 100% 50%), hsl(207 90% 54%));
+    --gradient-hero: linear-gradient(180deg, hsl(222 47% 5%) 0%, hsl(222 47% 8%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(222 47% 8%) 0%, hsl(222 47% 10%) 100%);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 30px hsl(186 100% 50% / 0.15);
+    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.4);
+
+    /* Typography */
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'Inter', system-ui, sans-serif;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.3);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .glow-text {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+  }
+
+  .glow-border {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .card-glass {
+    @apply bg-card/80 backdrop-blur-sm border border-border rounded-lg;
+    box-shadow: var(--shadow-card);
+  }
+
+  .terminal-prompt::before {
+    content: '$ ';
+    @apply text-accent font-mono;
+  }
+
+  .skill-tag {
+    @apply px-3 py-1.5 rounded-md text-sm font-medium bg-secondary border border-border 
+           hover:border-primary/50 hover:bg-primary/10 transition-all duration-300;
+  }
+
+  .nav-link {
+    @apply relative text-muted-foreground hover:text-foreground transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    @apply content-[''] absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold font-mono mb-2;
+  }
+
+  .section-subtitle {
+    @apply text-muted-foreground text-lg;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-typing {
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.5); }
+  }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: hsl(var(--primary)); }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
+  }
+
+  .animation-delay-100 { animation-delay: 0.1s; }
+  .animation-delay-200 { animation-delay: 0.2s; }
+  .animation-delay-300 { animation-delay: 0.3s; }
+  .animation-delay-400 { animation-delay: 0.4s; }
+  .animation-delay-500 { animation-delay: 0.5s; }
+}
