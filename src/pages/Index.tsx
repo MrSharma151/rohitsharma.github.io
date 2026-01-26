@@ -10,8 +10,9 @@ import { useEffect } from 'react';
 
 const Index = () => {
   useEffect(() => {
-    // Update document title and meta tags for SEO
-    document.title = 'Rohit Sharma | Azure DevOps Engineer';
+    // Update document title for SEO consistency
+    document.title =
+      'Rohit Sharma | DevOps Engineer | Azure Cloud | Kubernetes (AKS)';
   }, []);
 
   return (

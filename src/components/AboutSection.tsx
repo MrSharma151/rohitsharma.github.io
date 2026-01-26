@@ -3,23 +3,23 @@ import { Cloud, GitBranch, Server, Zap } from 'lucide-react';
 const highlights = [
   {
     icon: Cloud,
-    title: 'Cloud Migration',
-    description: 'Enterprise-scale Azure cloud migrations and modernization',
+    title: 'Azure Cloud Platforms',
+    description: 'Enterprise-scale cloud migration and modernization on Microsoft Azure',
   },
   {
     icon: GitBranch,
-    title: 'CI/CD Pipelines',
-    description: 'Automated deployment workflows with Azure DevOps & YAML',
+    title: 'CI/CD & GitOps',
+    description: 'Automated delivery pipelines and Git-driven deployment workflows',
   },
   {
     icon: Server,
     title: 'Infrastructure as Code',
-    description: 'Terraform, ARM templates, and reproducible infrastructure',
+    description: 'Terraform-based, reproducible, and version-controlled infrastructure',
   },
   {
     icon: Zap,
-    title: 'Containerization',
-    description: 'Docker, Kubernetes, and AKS for cloud-native deployments',
+    title: 'Kubernetes & Containers',
+    description: 'Docker and AKS for scalable, cloud-native application delivery',
   },
 ];
 
@@ -34,7 +34,7 @@ export const AboutSection = () => {
               // About Me
             </span>
             <h2 className="section-title mt-4">
-              Building the <span className="text-gradient">Future</span> of Infrastructure
+              Designing Reliable <span className="text-gradient">Cloud Platforms</span>
             </h2>
           </div>
 
@@ -42,23 +42,25 @@ export const AboutSection = () => {
             {/* About Text */}
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I am an <span className="text-foreground font-medium">Azure Cloud & DevOps Engineer</span> specializing 
-                in cloud migration, CI/CD automation, and deployment workflows using Azure DevOps.
-              </p>
-              
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                At <span className="text-primary font-medium">DXC Technology</span>, I contribute to a large-scale 
-                enterprise modernization program where I build and maintain CI/CD pipelines for legacy-to-cloud 
-                migration, create automated deployment workflows with reusable YAML templates, and manage 
-                segregated Azure cloud environments.
+                I am a <span className="text-foreground font-medium">DevOps Engineer</span> working on 
+                <span className="text-primary font-medium"> Azure cloud platforms</span>, focused on 
+                building reliable CI/CD pipelines, containerized deployments, and cloud-native delivery systems.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                My career began in full-stack engineering, which helps me design DevOps workflows that align 
-                well with developer needs and modern delivery practices. I focus heavily on 
-                <span className="text-accent"> cloud automation</span>, 
-                <span className="text-primary"> Infrastructure as Code</span>, and 
-                <span className="text-azure"> cloud-native observability</span>.
+                At <span className="text-primary font-medium">DXC Technology</span>, I support large-scale 
+                enterprise cloud migration initiatives by automating build and deployment workflows, 
+                managing multi-environment releases, and enabling consistent delivery across Azure services 
+                and Kubernetes (AKS).
+              </p>
+
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                I bring a strong application engineering background, which helps me design 
+                <span className="text-accent"> developer-friendly DevOps workflows</span> and understand 
+                application behavior end-to-end. My core interests include 
+                <span className="text-primary"> Infrastructure as Code</span>, 
+                <span className="text-azure"> Kubernetes platforms</span>, and 
+                <span className="text-accent"> GitOps-driven delivery</span>.
               </p>
 
               {/* Terminal-style certification */}
@@ -84,8 +86,12 @@ export const AboutSection = () => {
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                     <item.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                  <h3 className="font-semibold text-foreground mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {item.description}
+                  </p>
                 </div>
               ))}
             </div>

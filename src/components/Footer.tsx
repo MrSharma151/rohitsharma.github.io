@@ -1,4 +1,4 @@
-import { Terminal, Github, Linkedin, Heart } from 'lucide-react';
+import { Terminal, Github, Linkedin } from 'lucide-react';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,10 +19,8 @@ export const Footer = () => {
             </div>
 
             {/* Copyright */}
-            <div className="flex items-center gap-1 text-sm text-muted-foreground">
-              <span>© {currentYear} Rohit Sharma. Built with</span>
-              <Heart className="w-4 h-4 text-destructive inline" />
-              <span>and code.</span>
+            <div className="text-sm text-muted-foreground">
+              © {currentYear} Rohit Sharma. All rights reserved.
             </div>
 
             {/* Social Links */}
@@ -48,10 +46,10 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Thanks message */}
+          {/* Footer Note */}
           <div className="text-center mt-8">
             <p className="font-mono text-xs text-muted-foreground">
-              ⭐ Thanks for visiting! Feel free to explore my repositories.
+              Designed and maintained as a professional DevOps portfolio.
             </p>
           </div>
         </div>

@@ -25,14 +25,16 @@ export const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-background/95 backdrop-blur-md border-b border-border' : 'bg-transparent'
+        scrolled
+          ? 'bg-background/95 backdrop-blur-md border-b border-border'
+          : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <Terminal className="w-6 h-6 text-primary group-hover:animate-pulse" />
+          <a href="#" className="flex items-center gap-2">
+            <Terminal className="w-6 h-6 text-primary" />
             <span className="font-mono font-bold text-lg">
               <span className="text-primary">rohit</span>
               <span className="text-muted-foreground">@</span>
@@ -43,7 +45,11 @@ export const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <a key={item.label} href={item.href} className="nav-link text-sm font-medium">
+              <a
+                key={item.label}
+                href={item.href}
+                className="nav-link text-sm font-medium"
+              >
                 {item.label}
               </a>
             ))}
@@ -53,8 +59,12 @@ export const Navbar = () => {
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
               asChild
             >
-              <a href="https://github.com/MrSharma151" target="_blank" rel="noopener noreferrer">
-                GitHub
+              <a
+                href="https://github.com/MrSharma151"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub Profile
               </a>
             </Button>
           </div>
@@ -63,7 +73,7 @@ export const Navbar = () => {
           <button
             className="md:hidden p-2 text-foreground"
             onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
+            aria-label="Toggle navigation menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -88,8 +98,12 @@ export const Navbar = () => {
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground w-full"
                 asChild
               >
-                <a href="https://github.com/MrSharma151" target="_blank" rel="noopener noreferrer">
-                  GitHub
+                <a
+                  href="https://github.com/MrSharma151"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub Profile
                 </a>
               </Button>
             </div>

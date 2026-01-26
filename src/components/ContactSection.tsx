@@ -5,14 +5,14 @@ const contactLinks = [
   {
     icon: Github,
     label: 'GitHub',
-    value: 'MrSharma151',
+    value: 'github.com/MrSharma151',
     href: 'https://github.com/MrSharma151',
     color: 'hover:text-foreground',
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    value: 'rohit-sharma',
+    value: 'linkedin.com/in/rohit-sharma',
     href: 'https://www.linkedin.com/in/rohit-sharma-b320121a3/',
     color: 'hover:text-azure',
   },
@@ -49,7 +49,7 @@ export const ContactSection = () => {
               Let's <span className="text-gradient">Connect</span>
             </h2>
             <p className="section-subtitle mt-4 max-w-xl mx-auto">
-              Open to exploring opportunities in DevOps Engineering, Cloud Engineering, and Platform Engineering.
+              Open to DevOps and Cloud Engineering roles focused on Azure, Kubernetes, and modern delivery platforms.
             </p>
           </div>
 
@@ -62,7 +62,9 @@ export const ContactSection = () => {
                 <span className="w-3 h-3 rounded-full bg-yellow-500/70" />
                 <span className="w-3 h-3 rounded-full bg-accent/70" />
               </div>
-              <span className="font-mono text-sm text-muted-foreground ml-2">contact.sh</span>
+              <span className="font-mono text-sm text-muted-foreground ml-2">
+                contact.sh
+              </span>
             </div>
 
             {/* Contact Info */}
@@ -112,7 +114,7 @@ export const ContactSection = () => {
             >
               <a href="mailto:rhs.rohitsharma@gmail.com">
                 <Send className="w-4 h-4 mr-2" />
-                Send Message
+                Contact Me
               </a>
             </Button>
           </div>

@@ -3,9 +3,39 @@ import { Button } from '@/components/ui/button';
 
 const projects = [
   {
+    title: 'Framely – Mega DevOps AKS Project',
+    description:
+      'A production-style, end-to-end DevOps and GitOps implementation that re-architects an existing application into a Kubernetes-first delivery model on Azure.',
+    type: 'DevOps • AKS • GitOps',
+    techStack: [
+      'Azure Kubernetes Service (AKS)',
+      'Kubernetes',
+      'Docker',
+      'Terraform',
+      'Jenkins',
+      'Argo CD',
+      'Kustomize',
+      'Prometheus',
+      'Grafana',
+    ],
+    features: [
+      'Clear separation of CI, CD, and infrastructure responsibilities',
+      'Jenkins-based CI with image build and GitOps updates',
+      'GitOps-driven deployments using Argo CD',
+      'Environment promotion via Git (stage → prod)',
+      'Local validation using Docker Compose and KIND',
+    ],
+    links: {
+      github: 'https://github.com/MrSharma151/framely-mega-devops-aks',
+    },
+    icon: Container,
+    gradient: 'from-docker/20 to-kubernetes/20',
+  },
+  {
     title: 'Framely – Optical E-commerce Platform',
-    description: 'A full-stack Optical E-commerce system deployed entirely on Microsoft Azure, featuring ASP.NET Core Web API backend with Next.js Storefront and Admin Dashboard.',
-    type: 'PaaS',
+    description:
+      'A full-stack optical e-commerce platform deployed using Azure PaaS services, serving as the baseline implementation before Kubernetes re-architecture.',
+    type: 'Azure PaaS',
     techStack: [
       'ASP.NET Core',
       'Next.js',
@@ -16,65 +46,43 @@ const projects = [
       'GitHub Actions',
     ],
     features: [
-      'Multi-environment CI/CD pipelines',
-      'Customer storefront & Admin dashboard',
-      'Secure API backend',
-      'Cloud-native deployment',
+      'Customer storefront and admin dashboard',
+      'Automated CI/CD using GitHub Actions',
+      'Secure API backend and cloud-native services',
     ],
     links: {
       storefront: 'https://orange-wave-06841fe00.1.azurestaticapps.net/',
       admin: 'https://gentle-glacier-044690e00.1.azurestaticapps.net/',
-      github: 'https://github.com/MrSharma151',
+      github: 'https://github.com/MrSharma151/Framely',
     },
     icon: Cloud,
     gradient: 'from-azure/20 to-primary/20',
-  },
-  {
-    title: 'Framely AKS Mega DevOps Project',
-    description: 'A comprehensive Infrastructure as Code and GitOps implementation for deploying and managing Kubernetes workloads on Azure Kubernetes Service (AKS).',
-    type: 'IaC + GitOps',
-    techStack: [
-      'Terraform',
-      'Azure AKS',
-      'Kubernetes',
-      'Helm',
-      'ArgoCD',
-      'GitHub Actions',
-      'Azure Container Registry',
-    ],
-    features: [
-      'Production-grade AKS cluster',
-      'GitOps with ArgoCD',
-      'Terraform IaC modules',
-      'Automated deployments',
-    ],
-    links: {
-      github: 'https://github.com/MrSharma151',
-    },
-    icon: Container,
-    gradient: 'from-docker/20 to-kubernetes/20',
   },
 ];
 
 const architectureHighlights = [
   {
-    title: 'CI/CD Pipelines',
-    description: 'Automated build, test, and deployment workflows using Azure DevOps and GitHub Actions with multi-stage approvals.',
+    title: 'CI Pipelines',
+    description:
+      'Automated build and validation pipelines using Jenkins and GitHub-based workflows.',
     icon: GitBranch,
   },
   {
     title: 'Infrastructure as Code',
-    description: 'Declarative infrastructure management with Terraform and ARM templates for reproducible environments.',
+    description:
+      'Terraform-driven provisioning of Azure infrastructure and Kubernetes platforms.',
     icon: Layers,
   },
   {
-    title: 'GitOps Workflows',
-    description: 'Git as the single source of truth for infrastructure and application state with ArgoCD.',
+    title: 'GitOps Delivery',
+    description:
+      'Git as the single source of truth with Argo CD reconciling Kubernetes state.',
     icon: Github,
   },
   {
-    title: 'Kubernetes Native',
-    description: 'Container orchestration with AKS, Helm charts, and service mesh for scalable deployments.',
+    title: 'Kubernetes Platform',
+    description:
+      'Containerized workloads deployed and managed on Azure Kubernetes Service (AKS).',
     icon: Container,
   },
 ];
@@ -93,13 +101,13 @@ export const ProjectsSection = () => {
               Projects & <span className="text-gradient">Architecture</span>
             </h2>
             <p className="section-subtitle mt-4 max-w-2xl mx-auto">
-              Real-world cloud infrastructure and DevOps implementations
+              Real-world DevOps, cloud, and Kubernetes implementations
             </p>
           </div>
 
           {/* Projects */}
           <div className="space-y-8 mb-20">
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <div
                 key={project.title}
                 className="card-glass p-6 md:p-8 group hover:border-primary/30 transition-all duration-300"
@@ -108,24 +116,33 @@ export const ProjectsSection = () => {
                   {/* Project Info */}
                   <div className="lg:col-span-2 space-y-4">
                     <div className="flex items-start gap-4">
-                      <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${project.gradient} flex items-center justify-center shrink-0`}>
+                      <div
+                        className={`w-12 h-12 rounded-lg bg-gradient-to-br ${project.gradient} flex items-center justify-center shrink-0`}
+                      >
                         <project.icon className="w-6 h-6 text-primary" />
                       </div>
                       <div>
                         <div className="flex items-center gap-2 flex-wrap">
-                          <h3 className="text-xl font-bold text-foreground">{project.title}</h3>
+                          <h3 className="text-xl font-bold text-foreground">
+                            {project.title}
+                          </h3>
                           <span className="px-2 py-0.5 rounded text-xs font-mono bg-primary/20 text-primary">
                             {project.type}
                           </span>
                         </div>
-                        <p className="text-muted-foreground mt-2">{project.description}</p>
+                        <p className="text-muted-foreground mt-2">
+                          {project.description}
+                        </p>
                       </div>
                     </div>
 
                     {/* Features */}
                     <div className="pl-16 space-y-2">
                       {project.features.map((feature) => (
-                        <div key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <div
+                          key={feature}
+                          className="flex items-center gap-2 text-sm text-muted-foreground"
+                        >
                           <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                           {feature}
                         </div>
@@ -145,20 +162,33 @@ export const ProjectsSection = () => {
                   {/* Links */}
                   <div className="flex lg:flex-col gap-3 lg:justify-center">
                     {project.links.storefront && (
-                      <Button variant="outline" size="sm" className="flex-1 lg:flex-none" asChild>
-                        <a href={project.links.storefront} target="_blank" rel="noopener noreferrer">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="flex-1 lg:flex-none"
+                        asChild
+                      >
+                        <a
+                          href={project.links.storefront}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <ExternalLink className="w-4 h-4 mr-2" />
                           Live Demo
                         </a>
                       </Button>
                     )}
-                    <Button 
-                      variant="outline" 
-                      size="sm" 
-                      className="flex-1 lg:flex-none border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground" 
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="flex-1 lg:flex-none border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground"
                       asChild
                     >
-                      <a href={project.links.github} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={project.links.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Github className="w-4 h-4 mr-2" />
                         GitHub
                       </a>
@@ -188,8 +218,12 @@ export const ProjectsSection = () => {
                 <div className="w-12 h-12 rounded-lg bg-secondary mx-auto mb-4 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h4 className="font-semibold text-foreground mb-2">{item.title}</h4>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
+                <h4 className="font-semibold text-foreground mb-2">
+                  {item.title}
+                </h4>
+                <p className="text-sm text-muted-foreground">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
