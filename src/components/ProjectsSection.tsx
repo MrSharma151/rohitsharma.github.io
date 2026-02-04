@@ -1,88 +1,95 @@
-import { ExternalLink, Github, Cloud, Container, GitBranch, Layers } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import {
+  ExternalLink,
+  Github,
+  Cloud,
+  Container,
+  GitBranch,
+  Layers,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: 'Framely – Mega DevOps AKS Project',
+    title: "Framely – Mega DevOps AKS Project",
     description:
-      'A production-style, end-to-end DevOps and GitOps implementation that re-architects an existing application into a Kubernetes-first delivery model on Azure.',
-    type: 'DevOps • AKS • GitOps',
+      "A production-style, end-to-end DevOps and GitOps implementation that re-architects an existing application into a Kubernetes-first delivery model on Azure.",
+    type: "DevOps • AKS • GitOps",
     techStack: [
-      'Azure Kubernetes Service (AKS)',
-      'Kubernetes',
-      'Docker',
-      'Terraform',
-      'Jenkins',
-      'Argo CD',
-      'Kustomize',
-      'Prometheus',
-      'Grafana',
+      "Azure Kubernetes Service (AKS)",
+      "Kubernetes",
+      "Docker",
+      "Terraform",
+      "Jenkins",
+      "Argo CD",
+      "Kustomize",
+      "Prometheus",
+      "Grafana",
     ],
     features: [
-      'Clear separation of CI, CD, and infrastructure responsibilities',
-      'Jenkins-based CI with image build and GitOps updates',
-      'GitOps-driven deployments using Argo CD',
-      'Environment promotion via Git (stage → prod)',
-      'Local validation using Docker Compose and KIND',
+      "Clear separation of CI, CD, and infrastructure responsibilities",
+      "Jenkins-based CI with image build and GitOps updates",
+      "GitOps-driven deployments using Argo CD",
+      "Environment promotion via Git (stage → prod)",
+      "Local validation using Docker Compose and KIND",
     ],
     links: {
-      github: 'https://github.com/MrSharma151/framely-mega-devops-aks',
+      github: "https://github.com/MrSharma151/framely-mega-devops-aks",
     },
     icon: Container,
-    gradient: 'from-docker/20 to-kubernetes/20',
+    gradient: "from-docker/20 to-kubernetes/20",
   },
   {
-    title: 'Framely – Optical E-commerce Platform',
+    title: "Framely – Optical E-commerce Platform",
     description:
-      'A full-stack optical e-commerce platform deployed using Azure PaaS services, serving as the baseline implementation before Kubernetes re-architecture.',
-    type: 'Azure PaaS',
+      "A full-stack optical e-commerce platform deployed using Azure PaaS services, serving as the baseline implementation before Kubernetes re-architecture.",
+    type: "Azure PaaS",
     techStack: [
-      'ASP.NET Core',
-      'Next.js',
-      'Azure App Service',
-      'Azure SQL',
-      'Azure Static Web Apps',
-      'Blob Storage',
-      'GitHub Actions',
+      "ASP.NET Core",
+      "Next.js",
+      "Azure App Service",
+      "Azure SQL",
+      "Azure Static Web Apps",
+      "Blob Storage",
+      "GitHub Actions",
     ],
     features: [
-      'Customer storefront and admin dashboard',
-      'Automated CI/CD using GitHub Actions',
-      'Secure API backend and cloud-native services',
+      "Customer storefront and admin dashboard",
+      "Automated CI/CD using GitHub Actions",
+      "Secure API backend and cloud-native services",
     ],
     links: {
-      storefront: 'https://orange-wave-06841fe00.1.azurestaticapps.net/',
-      admin: 'https://gentle-glacier-044690e00.1.azurestaticapps.net/',
-      github: 'https://github.com/MrSharma151/Framely',
+      storefront: "https://orange-wave-06841fe00.1.azurestaticapps.net/",
+      admin: "https://gentle-glacier-044690e00.1.azurestaticapps.net/",
+      github: "https://github.com/MrSharma151/Framely",
     },
     icon: Cloud,
-    gradient: 'from-azure/20 to-primary/20',
+    gradient: "from-azure/20 to-primary/20",
   },
 ];
 
 const architectureHighlights = [
   {
-    title: 'CI Pipelines',
+    title: "CI Pipelines",
     description:
-      'Automated build and validation pipelines using Jenkins and GitHub-based workflows.',
+      "Automated build and validation pipelines using Jenkins and GitHub-based workflows.",
     icon: GitBranch,
   },
   {
-    title: 'Infrastructure as Code',
+    title: "Infrastructure as Code",
     description:
-      'Terraform-driven provisioning of Azure infrastructure and Kubernetes platforms.',
+      "Terraform-driven provisioning of Azure infrastructure and Kubernetes platforms.",
     icon: Layers,
   },
   {
-    title: 'GitOps Delivery',
+    title: "GitOps Delivery",
     description:
-      'Git as the single source of truth with Argo CD reconciling Kubernetes state.',
+      "Git as the single source of truth with Argo CD reconciling Kubernetes state.",
     icon: Github,
   },
   {
-    title: 'Kubernetes Platform',
+    title: "Kubernetes Platform",
     description:
-      'Containerized workloads deployed and managed on Azure Kubernetes Service (AKS).',
+      "Containerized workloads deployed and managed on Azure Kubernetes Service (AKS).",
     icon: Container,
   },
 ];
@@ -201,6 +208,37 @@ export const ProjectsSection = () => {
 
           {/* Architecture Highlights */}
           <div className="text-center mb-12">
+            {/* Project Walkthrough Video */}
+            <div className="max-w-5xl mx-auto mb-20">
+              <div className="card-glass p-6 md:p-8">
+                <div className="text-center mb-6">
+                  <span className="font-mono text-primary text-sm tracking-wider uppercase">
+                    // Project Walkthrough
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-bold mt-4">
+                    Framely AKS DevOps Platform
+                  </h3>
+                  <p className="text-muted-foreground mt-3 max-w-2xl mx-auto text-sm md:text-base">
+                    A short walkthrough demonstrating the complete end-to-end
+                    DevOps and GitOps workflow running on Azure Kubernetes
+                    Service (AKS). This video is provided as a project reference
+                    and portfolio artifact.
+                  </p>
+                </div>
+
+                {/* Responsive Video */}
+                <div className="relative w-full overflow-hidden rounded-lg aspect-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/UNNiRSG4tmo"
+                    title="Framely AKS GitOps Project Walkthrough"
+                    className="absolute inset-0 w-full h-full border-0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </div>
+
             <span className="font-mono text-accent text-sm tracking-wider uppercase">
               // DevOps Focus
             </span>
