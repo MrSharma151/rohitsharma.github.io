@@ -12,7 +12,7 @@ const contactLinks = [
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    value: 'linkedin.com/in/rohit-sharma',
+    value: 'linkedin.com/in/rohit-sharma-b320121a3',
     href: 'https://www.linkedin.com/in/rohit-sharma-b320121a3/',
     color: 'hover:text-azure',
   },
@@ -49,13 +49,12 @@ export const ContactSection = () => {
               Let's <span className="text-gradient">Connect</span>
             </h2>
             <p className="section-subtitle mt-4 max-w-xl mx-auto">
-              Open to DevOps and Cloud Engineering roles focused on Azure, Kubernetes, and modern delivery platforms.
+              Open to DevOps and Cloud Engineering opportunities focused on cloud platforms, Kubernetes, CI/CD, and modern delivery systems.
             </p>
           </div>
 
           {/* Terminal-style Contact Card */}
           <div className="card-glass p-6 md:p-8 max-w-2xl mx-auto">
-            {/* Terminal Header */}
             <div className="flex items-center gap-2 pb-4 border-b border-border mb-6">
               <div className="flex gap-1.5">
                 <span className="w-3 h-3 rounded-full bg-destructive/70" />
@@ -67,7 +66,6 @@ export const ContactSection = () => {
               </span>
             </div>
 
-            {/* Contact Info */}
             <div className="space-y-4 font-mono text-sm">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <span className="text-accent">$</span>
@@ -114,7 +112,7 @@ export const ContactSection = () => {
             >
               <a href="mailto:rhs.rohitsharma@gmail.com">
                 <Send className="w-4 h-4 mr-2" />
-                Contact Me
+                Discuss Opportunities
               </a>
             </Button>
           </div>

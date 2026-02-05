@@ -2,18 +2,18 @@ import { Building2, Calendar, MapPin, ChevronRight } from 'lucide-react';
 
 const experiences = [
   {
-    title: 'DevOps Engineer (Azure Cloud)',
+    title: 'DevOps Engineer (Cloud Platforms)',
     company: 'DXC Technology',
     location: 'Chennai, India',
     period: 'September 2024 – Present',
     current: true,
     description:
-      'Working on enterprise-scale cloud modernization initiatives, supporting the migration of legacy applications to Azure using automated CI/CD and cloud-native delivery practices.',
+      'Contributing to enterprise-scale cloud modernization initiatives, supporting the migration of legacy applications into cloud-native and containerized delivery models.',
     highlights: [
-      'Designed and supported CI/CD pipelines using Jenkins, GitHub Actions, and Azure DevOps across multiple environments',
-      'Managed containerized workloads and deployments on Azure Kubernetes Service (AKS)',
-      'Supported application deployments across Azure App Service, Azure Functions, and Virtual Machines',
-      'Collaborated with application and cloud teams to improve deployment reliability and delivery consistency',
+      'Designed and supported multi-platform CI/CD pipelines using Jenkins, GitHub Actions, and Azure DevOps across dev, test, and production environments',
+      'Managed containerized workloads and deployments on Kubernetes (AKS), improving release consistency and environment parity',
+      'Supported application deployments across cloud services including App Service, Functions, and Virtual Machines',
+      'Collaborated with application, QA, and cloud teams to improve deployment reliability, pipeline stability, and delivery efficiency',
     ],
   },
   {
@@ -23,11 +23,11 @@ const experiences = [
     period: 'August 2023 – March 2024',
     current: false,
     description:
-      'Delivered custom web applications for clients across real estate, optical, and retail domains.',
+      'Delivered custom web applications for clients across real estate, optical, and retail domains, handling end-to-end development and deployment workflows.',
     highlights: [
       'Built responsive frontends using React.js and backend services using Node.js and MySQL',
-      'Designed and integrated RESTful APIs to support business workflows',
-      'Worked with Git and GitHub for version control and professional project delivery',
+      'Designed and integrated RESTful APIs to support business workflows and data exchange',
+      'Used Git and GitHub for version control, structured commits, and professional project delivery',
     ],
   },
 ];
@@ -35,12 +35,10 @@ const experiences = [
 export const ExperienceSection = () => {
   return (
     <section id="experience" className="py-24 md:py-32 relative bg-secondary/20">
-      {/* Background */}
       <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--border)/0.15)_1px,transparent_1px)] bg-[size:1px_40px]" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
-          {/* Section Header */}
           <div className="text-center mb-16">
             <span className="font-mono text-primary text-sm tracking-wider uppercase">
               // Career Path
@@ -50,9 +48,7 @@ export const ExperienceSection = () => {
             </h2>
           </div>
 
-          {/* Timeline */}
           <div className="relative">
-            {/* Timeline Line */}
             <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2" />
 
             {experiences.map((exp, index) => (
@@ -64,7 +60,6 @@ export const ExperienceSection = () => {
                     : 'md:pl-[50%] md:ml-auto'
                 }`}
               >
-                {/* Timeline Dot */}
                 <div
                   className={`absolute top-0 w-4 h-4 rounded-full border-2 ${
                     exp.current
@@ -73,13 +68,11 @@ export const ExperienceSection = () => {
                   } left-0 md:left-1/2 md:-translate-x-1/2`}
                 />
 
-                {/* Content Card */}
                 <div
                   className={`card-glass p-6 ml-8 md:ml-0 ${
                     index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'
                   }`}
                 >
-                  {/* Header */}
                   <div
                     className={`flex flex-col gap-2 mb-4 ${
                       index % 2 === 0 ? 'md:items-end' : 'md:items-start'
@@ -124,7 +117,6 @@ export const ExperienceSection = () => {
                     {exp.description}
                   </p>
 
-                  {/* Highlights */}
                   <ul
                     className={`space-y-2 ${
                       index % 2 === 0 ? 'md:text-right' : ''

@@ -3,8 +3,8 @@ import { Cloud, GitBranch, Server, Zap } from 'lucide-react';
 const highlights = [
   {
     icon: Cloud,
-    title: 'Azure Cloud Platforms',
-    description: 'Enterprise-scale cloud migration and modernization on Microsoft Azure',
+    title: 'Cloud Platforms',
+    description: 'Enterprise-scale cloud migration and modernization on Azure-based environments',
   },
   {
     icon: GitBranch,
@@ -42,16 +42,16 @@ export const AboutSection = () => {
             {/* About Text */}
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I am a <span className="text-foreground font-medium">DevOps Engineer</span> working on 
-                <span className="text-primary font-medium"> Azure cloud platforms</span>, focused on 
-                building reliable CI/CD pipelines, containerized deployments, and cloud-native delivery systems.
+                I am a <span className="text-foreground font-medium">DevOps Engineer</span> working across 
+                <span className="text-primary font-medium"> cloud platforms</span>, focused on building reliable 
+                CI/CD pipelines, containerized deployments, and cloud-native delivery systems.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
                 At <span className="text-primary font-medium">DXC Technology</span>, I support large-scale 
                 enterprise cloud migration initiatives by automating build and deployment workflows, 
                 managing multi-environment releases, and enabling consistent delivery across Azure services 
-                and Kubernetes (AKS).
+                and Kubernetes (AKS) platforms.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -60,7 +60,7 @@ export const AboutSection = () => {
                 application behavior end-to-end. My core interests include 
                 <span className="text-primary"> Infrastructure as Code</span>, 
                 <span className="text-azure"> Kubernetes platforms</span>, and 
-                <span className="text-accent"> GitOps-driven delivery</span>.
+                <span className="text-accent"> GitOps-driven delivery models</span>.
               </p>
 
               {/* Terminal-style certification */}

@@ -10,13 +10,12 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "Framely – Mega DevOps AKS Project",
+    title: "Framely – Kubernetes & GitOps DevOps Platform",
     description:
-      "A production-style, end-to-end DevOps and GitOps implementation that re-architects an existing application into a Kubernetes-first delivery model on Azure.",
-    type: "DevOps • AKS • GitOps",
+      "A production-style DevOps platform implementation that re-architects an existing application into a cloud-native, Kubernetes-first delivery system with GitOps-driven releases.",
+    type: "Platform Engineering • GitOps • Kubernetes",
     techStack: [
-      "Azure Kubernetes Service (AKS)",
-      "Kubernetes",
+      "Kubernetes (AKS)",
       "Docker",
       "Terraform",
       "Jenkins",
@@ -24,13 +23,14 @@ const projects = [
       "Kustomize",
       "Prometheus",
       "Grafana",
+      "Azure Log Analytics",
     ],
     features: [
-      "Clear separation of CI, CD, and infrastructure responsibilities",
-      "Jenkins-based CI with image build and GitOps updates",
-      "GitOps-driven deployments using Argo CD",
-      "Environment promotion via Git (stage → prod)",
-      "Local validation using Docker Compose and KIND",
+      "Designed a complete CI–CD separation model with Jenkins for CI and Argo CD for GitOps-based CD",
+      "Established Git as the single source of truth for environment promotion and deployment state",
+      "Provisioned cloud infrastructure using modular Terraform Infrastructure as Code",
+      "Implemented environment-specific Kubernetes deployments with Git-driven stage → prod promotion",
+      "Integrated observability for workloads and cluster metrics using Prometheus and Grafana",
     ],
     links: {
       github: "https://github.com/MrSharma151/framely-mega-devops-aks",
@@ -39,10 +39,10 @@ const projects = [
     gradient: "from-docker/20 to-kubernetes/20",
   },
   {
-    title: "Framely – Optical E-commerce Platform",
+    title: "Framely – Optical E-commerce Platform (PaaS-Based)",
     description:
-      "A full-stack optical e-commerce platform deployed using Azure PaaS services, serving as the baseline implementation before Kubernetes re-architecture.",
-    type: "Azure PaaS",
+      "A full-stack optical e-commerce platform deployed using cloud PaaS services, serving as the baseline implementation before Kubernetes re-architecture.",
+    type: "Cloud PaaS Implementation",
     techStack: [
       "ASP.NET Core",
       "Next.js",
@@ -53,13 +53,12 @@ const projects = [
       "GitHub Actions",
     ],
     features: [
-      "Customer storefront and admin dashboard",
-      "Automated CI/CD using GitHub Actions",
-      "Secure API backend and cloud-native services",
+      "Customer storefront and admin dashboard architecture",
+      "Automated CI/CD pipelines using GitHub Actions",
+      "Secure API backend integrated with managed cloud services",
     ],
     links: {
       storefront: "https://orange-wave-06841fe00.1.azurestaticapps.net/",
-      admin: "https://gentle-glacier-044690e00.1.azurestaticapps.net/",
       github: "https://github.com/MrSharma151/Framely",
     },
     icon: Cloud,
@@ -71,25 +70,25 @@ const architectureHighlights = [
   {
     title: "CI Pipelines",
     description:
-      "Automated build and validation pipelines using Jenkins and GitHub-based workflows.",
+      "Automated build, validation, and artifact workflows using Jenkins and Git-based pipelines.",
     icon: GitBranch,
   },
   {
     title: "Infrastructure as Code",
     description:
-      "Terraform-driven provisioning of Azure infrastructure and Kubernetes platforms.",
+      "Terraform-driven provisioning of cloud infrastructure and Kubernetes platforms.",
     icon: Layers,
   },
   {
     title: "GitOps Delivery",
     description:
-      "Git as the single source of truth with Argo CD reconciling Kubernetes state.",
+      "Git as the control plane with Argo CD reconciling desired and actual cluster state.",
     icon: Github,
   },
   {
     title: "Kubernetes Platform",
     description:
-      "Containerized workloads deployed and managed on Azure Kubernetes Service (AKS).",
+      "Containerized workloads deployed and managed on production-style Kubernetes clusters.",
     icon: Container,
   },
 ];
@@ -99,7 +98,6 @@ export const ProjectsSection = () => {
     <section id="projects" className="py-24 md:py-32 relative">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
           <div className="text-center mb-16">
             <span className="font-mono text-primary text-sm tracking-wider uppercase">
               // Featured Work
@@ -108,7 +106,8 @@ export const ProjectsSection = () => {
               Projects & <span className="text-gradient">Architecture</span>
             </h2>
             <p className="section-subtitle mt-4 max-w-2xl mx-auto">
-              Real-world DevOps, cloud, and Kubernetes implementations
+              Real-world DevOps platforms, cloud infrastructure, and
+              Kubernetes-based delivery systems
             </p>
           </div>
 
