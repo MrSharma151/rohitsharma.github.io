@@ -7,23 +7,25 @@ export const Footer = () => {
     <footer className="py-12 border-t border-border">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          
+          {/* Top Footer Row */}
+          <div className="relative flex flex-col md:flex-row items-center gap-6">
             
-            {/* Logo */}
-            <div className="flex items-center gap-2">
+            {/* Logo — Left on desktop */}
+            <div className="flex items-center gap-2 md:absolute md:left-0">
               <Terminal className="w-5 h-5 text-primary" />
               <span className="font-mono text-sm text-foreground">
                 Rohit Sharma · DevOps Engineer
               </span>
             </div>
 
-            {/* Copyright */}
-            <div className="text-sm text-muted-foreground">
+            {/* Copyright — Perfect Center */}
+            <div className="text-sm text-muted-foreground text-center">
               © {currentYear} Rohit Sharma. All rights reserved.
             </div>
 
-            {/* Social Links */}
-            <div className="flex items-center gap-4">
+            {/* Social Links — Right on desktop */}
+            <div className="flex items-center gap-4 md:absolute md:right-0">
               <a
                 href="https://github.com/MrSharma151"
                 target="_blank"
@@ -51,6 +53,7 @@ export const Footer = () => {
               Professional portfolio focused on DevOps engineering, cloud platforms, and Kubernetes-based delivery systems.
             </p>
           </div>
+
         </div>
       </div>
     </footer>
