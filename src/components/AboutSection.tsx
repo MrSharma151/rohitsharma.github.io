@@ -4,22 +4,22 @@ const highlights = [
   {
     icon: Cloud,
     title: 'Cloud Platforms',
-    description: 'Enterprise-scale cloud migration and modernization on Azure-based environments',
+    description: 'Azure-based cloud environments with familiarity in AWS and cloud-agnostic DevOps practices',
   },
   {
     icon: GitBranch,
     title: 'CI/CD & GitOps',
-    description: 'Automated delivery pipelines and Git-driven deployment workflows',
+    description: 'Automated CI/CD pipelines using Jenkins, GitHub Actions, GitLab CI, and Azure DevOps',
   },
   {
     icon: Server,
     title: 'Infrastructure as Code',
-    description: 'Terraform-based, reproducible, and version-controlled infrastructure',
+    description: 'Terraform-based, version-controlled, and reproducible infrastructure deployments',
   },
   {
     icon: Zap,
     title: 'Kubernetes & Containers',
-    description: 'Docker and AKS for scalable, cloud-native application delivery',
+    description: 'Docker and Kubernetes (AKS) for scalable, cloud-native application delivery',
   },
 ];
 
@@ -42,22 +42,33 @@ export const AboutSection = () => {
             {/* About Text */}
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I am a <span className="text-foreground font-medium">DevOps Engineer</span> working across 
-                <span className="text-primary font-medium"> cloud platforms</span>, focused on building reliable 
-                CI/CD pipelines, containerized deployments, and cloud-native delivery systems.
+                I am a <span className="text-foreground font-medium">DevOps Engineer</span> with ~2 years of experience
+                working across <span className="text-primary font-medium">cloud platforms</span>, focused on building
+                reliable CI/CD pipelines, containerized deployments, and automated cloud-native delivery systems.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                At <span className="text-primary font-medium">DXC Technology</span>, I support large-scale 
-                enterprise cloud migration initiatives by automating build and deployment workflows, 
-                managing multi-environment releases, and enabling consistent delivery across Azure services 
-                and Kubernetes (AKS) platforms.
+                At <span className="text-primary font-medium">DXC Technology</span>, I work on enterprise cloud
+                modernization initiatives, migrating legacy applications to cloud-hosted and containerized
+                environments using <span className="text-accent">Azure</span> and cloud-agnostic DevOps practices
+                with familiarity in <span className="text-accent">AWS</span>. I design and maintain CI/CD pipelines,
+                manage Kubernetes workloads, and automate infrastructure using Terraform.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I bring a strong application engineering background, which helps me design 
-                <span className="text-accent"> developer-friendly DevOps workflows</span> and understand 
-                application behavior end-to-end. My core interests include 
+                My experience includes working with 
+                <span className="text-primary"> Kubernetes</span>, 
+                <span className="text-accent"> Docker</span>, 
+                <span className="text-primary"> Terraform</span>, 
+                <span className="text-accent"> Linux</span>, and 
+                <span className="text-primary"> Git</span>, with focus on building scalable, reliable, and repeatable
+                deployment workflows across development, testing, and production environments.
+              </p>
+
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                With a strong application engineering background, I design 
+                <span className="text-accent"> developer-friendly DevOps workflows</span> and understand application
+                behavior end-to-end. My core interests include 
                 <span className="text-primary"> Infrastructure as Code</span>, 
                 <span className="text-azure"> Kubernetes platforms</span>, and 
                 <span className="text-accent"> GitOps-driven delivery models</span>.

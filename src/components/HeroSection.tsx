@@ -18,7 +18,7 @@ export const HeroSection = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border animate-fade-in-up">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
             <span className="font-mono text-sm text-muted-foreground">
-              Open to DevOps & Cloud Engineering opportunities
+              Open to DevOps / Cloud / Platform Engineering opportunities
             </span>
           </div>
 
@@ -31,45 +31,74 @@ export const HeroSection = () => {
           {/* Title */}
           <div className="animate-fade-in-up animation-delay-200">
             <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-4">
-              DevOps Engineer | Cloud Platforms | Kubernetes | CI/CD | GitOps
+              DevOps Engineer | Kubernetes | Terraform | CI/CD | Docker | Azure | AWS
             </h2>
+
             <p className="font-mono text-lg md:text-xl text-muted-foreground">
-              <span className="text-primary">Cloud</span>
+              <span className="text-primary">Cloud Platforms</span>
               <span className="mx-3 text-border">•</span>
               <span className="text-accent">CI/CD Automation</span>
               <span className="mx-3 text-border">•</span>
               <span className="text-azure">Kubernetes</span>
               <span className="mx-3 text-border">•</span>
-              <span className="text-docker">Infrastructure as Code</span>
+              <span className="text-docker">Terraform & Docker</span>
             </p>
           </div>
 
           {/* Description */}
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up animation-delay-300">
-            DevOps Engineer working on cloud platforms, focused on building reliable CI/CD pipelines, 
-            managing containerized workloads on Kubernetes, and enabling scalable, cloud-native 
-            application delivery through automation and Infrastructure as Code.
+            DevOps Engineer with ~2 years of experience working on cloud platforms, focused on building reliable CI/CD pipelines,
+            managing containerized workloads on Kubernetes, and enabling scalable cloud-native application delivery using Terraform,
+            Docker, and Infrastructure as Code across Azure and cloud-agnostic environments.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up animation-delay-400">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-mono glow-border" asChild>
+            <Button
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 font-mono glow-border"
+              asChild
+            >
               <a href="#projects">View Projects</a>
             </Button>
-            <Button size="lg" variant="outline" className="border-border hover:border-primary hover:text-primary" asChild>
+
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-border hover:border-primary hover:text-primary"
+              asChild
+            >
               <a href="#contact">Get In Touch</a>
             </Button>
           </div>
 
           {/* Social Links */}
           <div className="flex justify-center gap-6 pt-4 animate-fade-in-up animation-delay-500">
-            <a href="https://github.com/MrSharma151" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-secondary/50 border border-border hover:border-primary hover:text-primary transition-all duration-300" aria-label="GitHub">
+            <a
+              href="https://github.com/MrSharma151"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg bg-secondary/50 border border-border hover:border-primary hover:text-primary transition-all duration-300"
+              aria-label="GitHub"
+            >
               <Github className="w-5 h-5" />
             </a>
-            <a href="https://www.linkedin.com/in/rohit-sharma-b320121a3/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-secondary/50 border border-border hover:border-primary hover:text-primary transition-all duration-300" aria-label="LinkedIn">
+
+            <a
+              href="https://www.linkedin.com/in/rohit-sharma-b320121a3/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg bg-secondary/50 border border-border hover:border-primary hover:text-primary transition-all duration-300"
+              aria-label="LinkedIn"
+            >
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="mailto:rhs.rohitsharma@gmail.com" className="p-3 rounded-lg bg-secondary/50 border border-border hover:border-primary hover:text-primary transition-all duration-300" aria-label="Email">
+
+            <a
+              href="mailto:rhs.rohitsharma@gmail.com"
+              className="p-3 rounded-lg bg-secondary/50 border border-border hover:border-primary hover:text-primary transition-all duration-300"
+              aria-label="Email"
+            >
               <Mail className="w-5 h-5" />
             </a>
           </div>
