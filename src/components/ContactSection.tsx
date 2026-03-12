@@ -34,9 +34,9 @@ color: 'hover:text-accent',
 
 export const ContactSection = () => {
 return ( <section id="contact" className="py-24 md:py-32 relative">
-{/* Background Glow */} <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
 
-```
+  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+
   <div className="container mx-auto px-4 md:px-6 relative z-10">
     <div className="max-w-4xl mx-auto">
 
@@ -57,9 +57,10 @@ return ( <section id="contact" className="py-24 md:py-32 relative">
       </div>
 
 
-      {/* Contact Card */}
+      {/* Card */}
       <div className="card-glass p-6 md:p-8 max-w-2xl mx-auto">
 
+        {/* top bar */}
         <div className="flex items-center gap-2 pb-4 border-b border-border mb-6">
           <div className="flex gap-1.5">
             <span className="w-3 h-3 rounded-full bg-destructive/70" />
@@ -73,7 +74,7 @@ return ( <section id="contact" className="py-24 md:py-32 relative">
         </div>
 
 
-        <div className="space-y-4 font-mono text-sm">
+        <div className="font-mono text-sm space-y-4">
 
           <div className="flex items-center gap-2 text-muted-foreground">
             <span className="text-accent">$</span>
@@ -81,7 +82,7 @@ return ( <section id="contact" className="py-24 md:py-32 relative">
           </div>
 
 
-          <div className="pl-4 space-y-4">
+          <div className="pl-4 space-y-3">
 
             {contactLinks.map((link) => (
               <a
@@ -91,23 +92,26 @@ return ( <section id="contact" className="py-24 md:py-32 relative">
                 rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                 className={`flex items-center gap-3 text-muted-foreground transition-colors ${link.color} group`}
               >
-                <link.icon className="w-5 h-5" />
+                <link.icon className="w-5 h-5 shrink-0" />
 
-                <span className="text-foreground/70">
+                <span className="text-foreground/70 w-20">
                   {link.label}:
                 </span>
 
-                <span className="underline underline-offset-4 decoration-border group-hover:decoration-current transition-colors">
+                <span className="underline underline-offset-4 decoration-border group-hover:decoration-current">
                   {link.value}
                 </span>
               </a>
             ))}
 
 
-            <div className="flex items-center gap-3 text-muted-foreground pt-2">
-              <MapPin className="w-5 h-5" />
-              <span className="text-foreground/70">Location:</span>
-              <span>Chennai, Tamil Nadu, India</span>
+            {/* location */}
+            <div className="flex items-center gap-3 text-muted-foreground">
+              <MapPin className="w-5 h-5 shrink-0" />
+              <span className="text-foreground/70 w-20">
+                Location:
+              </span>
+              <span>Ghaziabad, Uttar Pradesh, India</span>
             </div>
 
           </div>
@@ -122,7 +126,7 @@ return ( <section id="contact" className="py-24 md:py-32 relative">
       </div>
 
 
-      {/* CTA */}
+      {/* button */}
       <div className="text-center mt-12">
         <Button
           size="lg"

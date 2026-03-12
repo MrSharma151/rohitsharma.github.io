@@ -104,7 +104,6 @@ Projects & <span className="text-gradient">Architecture</span> </h2> <p classNam
 Real-world DevOps platforms, cloud infrastructure, and
 Kubernetes-based delivery systems </p> </div>
 
-```
       {/* Projects */}
       <div className="space-y-8 mb-20">
         {projects.map((project) => (
