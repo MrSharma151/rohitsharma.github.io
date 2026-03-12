@@ -19,8 +19,8 @@ color: 'hover:text-azure',
 {
 icon: Mail,
 label: 'Email',
-value: '[rhs.rohitsharma@gmail.com](mailto:rhs.rohitsharma@gmail.com)',
-href: 'mailto:rhs[.rohitsharma@gmail.com](mailto:.rohitsharma@gmail.com)',
+value: 'rhs.rohitsharma@gmail.com',
+href: 'mailto:rhs.rohitsharma@gmail.com',
 color: 'hover:text-primary',
 },
 {
