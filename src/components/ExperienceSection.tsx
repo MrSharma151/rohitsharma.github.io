@@ -2,20 +2,40 @@ import { Building2, Calendar, MapPin, ChevronRight } from 'lucide-react';
 
 const experiences = [
 {
-title: 'DevOps Engineer (Cloud & Kubernetes)',
-company: 'DXC Technology',
-location: 'Chennai, India',
-period: 'September 2024 – Present',
+title: 'DevOps Engineer',
+company: 'SpatialChat',
+location: 'Remote',
+period: 'April 2026 – Present',
 current: true,
 description:
-'Working on enterprise cloud modernization initiatives, migrating legacy applications to cloud-hosted and containerized environments using Azure and cloud-agnostic DevOps practices with familiarity in AWS.',
+'Managing cloud infrastructure, Kubernetes workloads, CI/CD automation, observability, and production operations for scalable real-time applications.',
 
 
 highlights: [
-  'Designed and maintained CI/CD pipelines using Jenkins, GitHub Actions, GitLab CI, and Azure DevOps across development, testing, and production environments',
-  'Managed containerized workloads using Docker and Kubernetes (AKS) and automated infrastructure provisioning using Terraform',
-  'Worked with cloud networking, virtual machines, and application services to support scalable and reliable deployments',
-  'Collaborated with development, QA, and cloud teams to improve pipeline reliability, release stability, and delivery efficiency',
+  'Working across Kubernetes, Docker, Terraform, Linux, and multi-cloud infrastructure environments',
+  'Building and maintaining CI/CD pipelines and deployment automation workflows for production systems',
+  'Managing monitoring, logging, and observability tooling to improve platform visibility and reliability',
+  'Collaborating with engineering teams to troubleshoot production issues and optimize cloud operations',
+],
+
+
+},
+
+{
+title: 'Analyst II – DevOps Engineer',
+company: 'DXC Technology',
+location: 'Chennai, India',
+period: 'September 2024 – April 2026',
+current: false,
+description:
+'Worked on enterprise cloud modernization initiatives involving cloud-hosted and containerized application platforms across Azure, AWS, and cloud-native DevOps environments.',
+
+
+highlights: [
+  'Designed and maintained CI/CD pipelines using Jenkins, GitHub Actions, GitLab CI/CD, and Azure DevOps',
+  'Managed Docker and Kubernetes (AKS) workloads and automated infrastructure provisioning using Terraform',
+  'Worked with cloud networking, virtual machines, and application services for scalable deployments',
+  'Collaborated with development and cloud teams to improve deployment reliability and release efficiency',
 ],
 
 
@@ -32,8 +52,8 @@ description:
 
 
 highlights: [
-  'Built frontend using React.js and backend services using Node.js / Express.js with MySQL',
-  'Designed REST APIs and implemented structured Git/GitHub workflows for version control and collaboration',
+  'Built frontend applications using React.js and backend services using Node.js / Express.js with MySQL',
+  'Designed REST APIs and implemented structured Git/GitHub workflows for collaboration and version control',
   'Supported deployment and testing workflows across development and production environments',
 ],
 
@@ -42,7 +62,6 @@ highlights: [
 
 export const ExperienceSection = () => {
 return ( <section id="experience" className="py-24 md:py-32 relative bg-secondary/20">
-
 
   <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--border)/0.15)_1px,transparent_1px)] bg-[size:1px_40px]" />
 
@@ -59,11 +78,9 @@ return ( <section id="experience" className="py-24 md:py-32 relative bg-secondar
         </h2>
       </div>
 
-
       <div className="relative">
 
         <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2" />
-
 
         {experiences.map((exp, index) => (
           <div
@@ -83,7 +100,6 @@ return ( <section id="experience" className="py-24 md:py-32 relative bg-secondar
                   : 'bg-background border-border'
               } left-0 md:left-1/2 md:-translate-x-1/2`}
             />
-
 
             {/* Card */}
             <div
@@ -111,7 +127,6 @@ return ( <section id="experience" className="py-24 md:py-32 relative bg-secondar
                   )}
                 </div>
 
-
                 <div
                   className={`flex flex-wrap gap-4 text-sm text-muted-foreground ${
                     index % 2 === 0 ? 'md:justify-end' : ''
@@ -135,7 +150,6 @@ return ( <section id="experience" className="py-24 md:py-32 relative bg-secondar
 
               </div>
 
-
               {/* Description */}
               <p
                 className={`text-muted-foreground mb-4 ${
@@ -144,7 +158,6 @@ return ( <section id="experience" className="py-24 md:py-32 relative bg-secondar
               >
                 {exp.description}
               </p>
-
 
               {/* Highlights */}
               <ul
@@ -178,7 +191,6 @@ return ( <section id="experience" className="py-24 md:py-32 relative bg-secondar
     </div>
   </div>
 </section>
-
 
 );
 };

@@ -19,8 +19,8 @@ color: 'hover:text-azure',
 {
 icon: Mail,
 label: 'Email',
-value: 'rhs.rohitsharma@gmail.com',
-href: 'mailto:rhs.rohitsharma@gmail.com',
+value: '[rhs.rohitsharma@gmail.com](mailto:rhs.rohitsharma@gmail.com)',
+href: 'mailto:rhs[.rohitsharma@gmail.com](mailto:.rohitsharma@gmail.com)',
 color: 'hover:text-primary',
 },
 {
@@ -50,12 +50,12 @@ return ( <section id="contact" className="py-24 md:py-32 relative">
           Let's <span className="text-gradient">Connect</span>
         </h2>
 
-        <p className="section-subtitle mt-4 max-w-xl mx-auto">
-          Open to DevOps, Cloud, and Platform Engineering opportunities focused on Kubernetes,
-          CI/CD, Infrastructure as Code, and cloud-native delivery platforms.
+        <p className="section-subtitle mt-4 max-w-2xl mx-auto">
+          DevOps Engineer at SpatialChat focused on Kubernetes, cloud infrastructure,
+          CI/CD automation, Infrastructure as Code, observability, and scalable
+          cloud-native delivery platforms across Azure, AWS, and GCP.
         </p>
       </div>
-
 
       {/* Card */}
       <div className="card-glass p-6 md:p-8 max-w-2xl mx-auto">
@@ -73,14 +73,12 @@ return ( <section id="contact" className="py-24 md:py-32 relative">
           </span>
         </div>
 
-
         <div className="font-mono text-sm space-y-4">
 
           <div className="flex items-center gap-2 text-muted-foreground">
             <span className="text-accent">$</span>
             <span>cat contact_info.txt</span>
           </div>
-
 
           <div className="pl-4 space-y-3">
 
@@ -104,7 +102,6 @@ return ( <section id="contact" className="py-24 md:py-32 relative">
               </a>
             ))}
 
-
             {/* location */}
             <div className="flex items-center gap-3 text-muted-foreground">
               <MapPin className="w-5 h-5 shrink-0" />
@@ -114,8 +111,16 @@ return ( <section id="contact" className="py-24 md:py-32 relative">
               <span>Ghaziabad, Uttar Pradesh, India</span>
             </div>
 
-          </div>
+            {/* current role */}
+            <div className="flex items-center gap-3 text-muted-foreground">
+              <Send className="w-5 h-5 shrink-0" />
+              <span className="text-foreground/70 w-20">
+                Current:
+              </span>
+              <span>DevOps Engineer at SpatialChat</span>
+            </div>
 
+          </div>
 
           <div className="flex items-center gap-2 text-muted-foreground mt-6 pt-4 border-t border-border">
             <span className="text-accent">$</span>
@@ -124,7 +129,6 @@ return ( <section id="contact" className="py-24 md:py-32 relative">
 
         </div>
       </div>
-
 
       {/* button */}
       <div className="text-center mt-12">
@@ -135,7 +139,7 @@ return ( <section id="contact" className="py-24 md:py-32 relative">
         >
           <a href="mailto:rhs.rohitsharma@gmail.com">
             <Send className="w-4 h-4 mr-2" />
-            Discuss Opportunities
+            Let's Build Something
           </a>
         </Button>
       </div>

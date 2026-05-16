@@ -1,194 +1,221 @@
 import { Cloud, GitBranch, Container, Activity, Code2, Server } from 'lucide-react';
 
 const skillCategories = [
-  {
-    title: 'Cloud Platforms',
-    icon: Cloud,
-    color: 'text-azure',
-    bgColor: 'bg-azure/10',
-    skills: [
-      'Microsoft Azure',
-      'AWS (Familiar)',
-      'Azure Kubernetes Service (AKS)',
-      'Virtual Machines',
-      'Azure App Service',
-      'Blob Storage',
-      'Cloud Networking',
-      'Cloud Computing',
-    ],
-  },
-  {
-    title: 'CI/CD & Delivery Systems',
-    icon: GitBranch,
-    color: 'text-primary',
-    bgColor: 'bg-primary/10',
-    skills: [
-      'CI/CD Automation',
-      'Jenkins',
-      'GitHub Actions',
-      'GitLab CI',
-      'Azure DevOps Pipelines',
-      'GitOps (Argo CD)',
-      'Release Workflows',
-      'Git',
-    ],
-  },
-  {
-    title: 'Kubernetes & Containers',
-    icon: Container,
-    color: 'text-docker',
-    bgColor: 'bg-docker/10',
-    skills: [
-      'Docker',
-      'Kubernetes',
-      'AKS Cluster Operations',
-      'Helm',
-      'Kustomize',
-      'Ingress (NGINX)',
-      'Container Registry',
-    ],
-  },
-  {
-    title: 'Observability & Operations',
-    icon: Activity,
-    color: 'text-accent',
-    bgColor: 'bg-accent/10',
-    skills: [
-      'Prometheus',
-      'Grafana',
-      'Azure Monitor',
-      'Log Analytics',
-      'Application Insights',
-      'Alerting',
-    ],
-  },
-  {
-    title: 'Infrastructure & Platform Automation',
-    icon: Server,
-    color: 'text-primary',
-    bgColor: 'bg-primary/10',
-    skills: [
-      'Terraform',
-      'Infrastructure as Code',
-      'Ansible',
-      'Linux',
-      'Bash / Shell',
-      'RBAC',
-      'Secrets Management',
-      'Networking',
-    ],
-  },
-  {
-    title: 'Application Engineering Background',
-    icon: Code2,
-    color: 'text-foreground',
-    bgColor: 'bg-secondary',
-    skills: [
-      'ASP.NET Core',
-      'Next.js',
-      'React.js',
-      'Node.js',
-      'REST APIs',
-      'SQL Server',
-      'MySQL',
-    ],
-  },
+{
+title: 'Cloud Platforms',
+icon: Cloud,
+color: 'text-azure',
+bgColor: 'bg-azure/10',
+skills: [
+'Microsoft Azure',
+'Amazon Web Services (AWS)',
+'Google Cloud Platform (GCP)',
+'Azure Kubernetes Service (AKS)',
+'Virtual Machines',
+'Azure App Service',
+'Blob Storage',
+'Cloud Networking',
+'Cloud Computing',
+],
+},
+
+{
+title: 'CI/CD & GitOps',
+icon: GitBranch,
+color: 'text-primary',
+bgColor: 'bg-primary/10',
+skills: [
+'CI/CD Automation',
+'Jenkins',
+'GitHub Actions',
+'GitLab CI/CD',
+'Azure DevOps',
+'Argo CD',
+'GitOps Workflows',
+'Release Automation',
+'Git',
+],
+},
+
+{
+title: 'Kubernetes & Containers',
+icon: Container,
+color: 'text-docker',
+bgColor: 'bg-docker/10',
+skills: [
+'Docker',
+'Kubernetes',
+'AKS Cluster Operations',
+'Helm',
+'Kustomize',
+'Ingress (NGINX)',
+'Container Registry',
+'Cloud-Native Deployments',
+],
+},
+
+{
+title: 'Observability & Operations',
+icon: Activity,
+color: 'text-accent',
+bgColor: 'bg-accent/10',
+skills: [
+'Prometheus',
+'Grafana',
+'Azure Monitor',
+'Log Analytics',
+'Application Insights',
+'Alerting',
+'Monitoring',
+'Incident Troubleshooting',
+],
+},
+
+{
+title: 'Infrastructure & Platform Automation',
+icon: Server,
+color: 'text-primary',
+bgColor: 'bg-primary/10',
+skills: [
+'Terraform',
+'Infrastructure as Code',
+'Ansible',
+'Linux',
+'Bash / Shell',
+'RBAC',
+'Secrets Management',
+'Networking',
+'Platform Engineering',
+],
+},
+
+{
+title: 'Application Engineering Background',
+icon: Code2,
+color: 'text-foreground',
+bgColor: 'bg-secondary',
+skills: [
+'ASP.NET Core',
+'Next.js',
+'React.js',
+'Node.js',
+'REST APIs',
+'SQL Server',
+'MySQL',
+],
+},
 ];
 
 export const SkillsSection = () => {
-  return (
-    <section id="skills" className="py-24 md:py-32 relative bg-secondary/20">
-      <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--border)/0.2)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--border)/0.2)_1px,transparent_1px)] bg-[size:40px_40px]" />
+return ( <section id="skills" className="py-24 md:py-32 relative bg-secondary/20">
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="max-w-6xl mx-auto">
+  <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--border)/0.2)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--border)/0.2)_1px,transparent_1px)] bg-[size:40px_40px]" />
 
-          <div className="text-center mb-16">
-            <span className="font-mono text-primary text-sm tracking-wider uppercase">
-              // Tech Stack
-            </span>
+  <div className="container mx-auto px-4 md:px-6 relative z-10">
+    <div className="max-w-6xl mx-auto">
 
-            <h2 className="section-title mt-4">
-              Skills & <span className="text-gradient">Technologies</span>
-            </h2>
+      <div className="text-center mb-16">
 
-            <p className="section-subtitle mt-4 max-w-2xl mx-auto">
-              Tools and technologies used to build, deploy, and operate cloud-native platforms
-            </p>
-          </div>
+        <span className="font-mono text-primary text-sm tracking-wider uppercase">
+          // Tech Stack
+        </span>
 
+        <h2 className="section-title mt-4">
+          Skills & <span className="text-gradient">Technologies</span>
+        </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {skillCategories.map((category) => (
+        <p className="section-subtitle mt-4 max-w-2xl mx-auto">
+          Technologies and platforms used to build, automate, deploy,
+          and operate scalable cloud-native infrastructure and production systems.
+        </p>
+
+      </div>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        {skillCategories.map((category) => (
+          <div
+            key={category.title}
+            className="card-glass p-6 group hover:border-primary/30 transition-all duration-300"
+          >
+
+            <div className="flex items-center gap-3 mb-5">
+
               <div
-                key={category.title}
-                className="card-glass p-6 group hover:border-primary/30 transition-all duration-300"
+                className={`w-10 h-10 rounded-lg ${category.bgColor} flex items-center justify-center`}
               >
-                <div className="flex items-center gap-3 mb-5">
-                  <div
-                    className={`w-10 h-10 rounded-lg ${category.bgColor} flex items-center justify-center`}
-                  >
-                    <category.icon className={`w-5 h-5 ${category.color}`} />
-                  </div>
-
-                  <h3 className="font-semibold text-foreground">
-                    {category.title}
-                  </h3>
-                </div>
-
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill) => (
-                    <span key={skill} className="skill-tag">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+                <category.icon className={`w-5 h-5 ${category.color}`} />
               </div>
-            ))}
+
+              <h3 className="font-semibold text-foreground">
+                {category.title}
+              </h3>
+
+            </div>
+
+            <div className="flex flex-wrap gap-2">
+
+              {category.skills.map((skill) => (
+                <span key={skill} className="skill-tag">
+                  {skill}
+                </span>
+              ))}
+
+            </div>
+
+          </div>
+        ))}
+
+      </div>
+
+      {/* Learning Section */}
+      <div className="mt-12 card-glass p-6 max-w-2xl mx-auto">
+
+        <div className="flex items-center gap-2 text-muted-foreground font-mono text-sm mb-4">
+          <span className="text-accent">$</span>
+          <span>learning --current</span>
+        </div>
+
+        <div className="grid sm:grid-cols-2 gap-3 pl-4">
+
+          <div className="flex items-center gap-2 text-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+
+            <span className="text-foreground">
+              Production-grade Kubernetes operations
+            </span>
           </div>
 
+          <div className="flex items-center gap-2 text-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
 
-          <div className="mt-12 card-glass p-6 max-w-2xl mx-auto">
-            <div className="flex items-center gap-2 text-muted-foreground font-mono text-sm mb-4">
-              <span className="text-accent">$</span>
-              <span>learning --current</span>
-            </div>
+            <span className="text-foreground">
+              Advanced Terraform modules & patterns
+            </span>
+          </div>
 
-            <div className="grid sm:grid-cols-2 gap-3 pl-4">
+          <div className="flex items-center gap-2 text-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
 
-              <div className="flex items-center gap-2 text-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                <span className="text-foreground">
-                  Production-grade Kubernetes deployments
-                </span>
-              </div>
+            <span className="text-foreground">
+              GitOps workflows with Argo CD
+            </span>
+          </div>
 
-              <div className="flex items-center gap-2 text-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                <span className="text-foreground">
-                  Advanced Terraform modules & patterns
-                </span>
-              </div>
+          <div className="flex items-center gap-2 text-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
 
-              <div className="flex items-center gap-2 text-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                <span className="text-foreground">
-                  GitOps workflows with Argo CD
-                </span>
-              </div>
-
-              <div className="flex items-center gap-2 text-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                <span className="text-foreground">
-                  Cloud-native monitoring & reliability
-                </span>
-              </div>
-
-            </div>
+            <span className="text-foreground">
+              Cloud-native monitoring & platform reliability
+            </span>
           </div>
 
         </div>
       </div>
-    </section>
-  );
+
+    </div>
+  </div>
+</section>
+
+);
 };
